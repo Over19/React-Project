@@ -1,0 +1,19 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #495B71;
+    height: 3em;
+}
+
+
+img {
+    width: 10%;
+    align-items: center;
+}
+
+a {
+    color: white;
+    margin: auto;
+}
+
