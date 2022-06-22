@@ -1,9 +1,17 @@
 import Navbar from './Components/Navbar/Navbar'
-import './App.css';
+import './App.css'
+import ItemListContainer from './Components/ItemListContainer'
+;
 
 const App = () => {
-  return(
+  return (
+    <>
     <Navbar />
+
+    <ItemListContainer />
+
+    </>
+
   )
 }
 

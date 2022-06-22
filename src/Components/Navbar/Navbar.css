@@ -1,8 +1,12 @@
+body {
+    background-color: #EFEAD8;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #495B71;
+    background-color: #C7D36F;
     height: 3em;
 }
 
@@ -13,7 +17,16 @@ img {
 }
 
 a {
-    color: white;
+    color: #00092C;
     margin: auto;
+    font-weight: bolder;
+    
+}
+
+
+h2 {
+    text-align: center;
+    color: darkgreen;   
+    
 }
 
