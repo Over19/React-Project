@@ -15,6 +15,10 @@ const restar = () => {
     cuenta > 2 && setCuenta(cuenta - 1)
 }
 
+const onAdd = () => {
+    alert(`Gracias por tu compra de ${cuenta} productos`)
+}
+
 
     return (
         <>
@@ -22,6 +26,7 @@ const restar = () => {
             <button onClick={restar}>-</button>
             <h4>{cuenta}</h4>
             <button onClick={sumar}>+</button>
+            <button onClick={onAdd}>Comprar</button>
         </div>
         
 </>
