@@ -8,7 +8,9 @@ const App = () => {
     <>
     <Navbar />
 
-    <ItemListContainer />
+    <ItemListContainer 
+    textoRandom='Texto Random para mostrar'
+    />
 
     </>
 

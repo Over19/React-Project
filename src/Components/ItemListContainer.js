@@ -1,9 +1,13 @@
+import ItemCounter from "./ItemCounter"
 
 
-
-const ItemListContainer = () => {
+const ItemListContainer = ({textoRandom}) => {
     return (
-        <h2>Para la proxima entrega prometo armar mejor el css de arriba, Tutor :D</h2>
+        <>
+        <h2>{textoRandom}</h2>
+
+        <ItemCounter stock={10} />
+        </>
     )
 }
 

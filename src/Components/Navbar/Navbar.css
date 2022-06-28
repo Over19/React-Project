@@ -30,3 +30,19 @@ h2 {
     
 }
 
+h4 {
+color: darkgreen;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 6px;
+    align-items: center;
+}
+
+button {
+    height: 50px;
+    width: 30px;
+}
