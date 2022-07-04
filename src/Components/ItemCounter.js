@@ -4,7 +4,7 @@ import { useState } from "react"
 
 const ItemCounter = ({stock}) =>  {
 
-const [cuenta, setCuenta] = useState(2)
+const [cuenta, setCuenta] = useState(1)
 
 const sumar = () => {
     cuenta < stock && setCuenta(cuenta + 1)
@@ -12,7 +12,7 @@ const sumar = () => {
 }
 
 const restar = () => {
-    cuenta > 2 && setCuenta(cuenta - 1)
+    cuenta > 1 && setCuenta(cuenta - 1)
 }
 
 const onAdd = () => {

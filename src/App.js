@@ -9,7 +9,7 @@ const App = () => {
     <Navbar />
 
     <ItemListContainer 
-    textoRandom='Texto Random para mostrar'
+    textoRandom='Productos en stock'
     />
 
     </>
