@@ -14,7 +14,7 @@ const ItemDetail = ({ producto }) => {
     return (
         <div class="col-sm-3 px-4 py-5">
             <div class="card text-center">
-                <img src="https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg" alt="{producto.title}" />
+                <img src={producto.image} alt={producto.title}  />
             </div>
             <div class="card-body">
                 <h3 class="card-title">{producto.title}</h3>
