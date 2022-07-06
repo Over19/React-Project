@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import ItemDetail from "./ItemDetail"
+import PacmanLoader from "react-spinners/PacmanLoader"
 
 
 
@@ -23,7 +24,7 @@ export const ItemDetailContainer = ({}) => {
                 setError(true)
             }
             finally {
-                setLoading(false)
+                setTimeout(() => setLoading(false), 2000)
                 
             }    
         }
@@ -33,9 +34,22 @@ export const ItemDetailContainer = ({}) => {
 
 
     return (
-
+        <>
+        {
+            loading ? <PacmanLoader
+            color="#1fd8c7"
+            size={30}
+            speedMultiplier={3}
+        /> :
         <ItemDetail
-        producto = {product2} />
+        producto = {product2} />}
+
+
+        </>
+        
+        
+
+        
 
 
 

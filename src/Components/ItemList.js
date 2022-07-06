@@ -25,7 +25,7 @@ const ItemList = ({item}) => {
                 setError(true)
             }
             finally {
-                setLoading(false)
+                setTimeout(() => setLoading(false), 2000)
                 
             }    
         }
