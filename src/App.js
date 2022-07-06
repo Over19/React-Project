@@ -1,7 +1,7 @@
 import Navbar from './Components/Navbar/Navbar'
 import './App.css'
-import ItemListContainer from './Components/ItemListContainer'
-;
+import ItemListContainer from './Components/ItemListContainer';
+import ItemDetailContainer from './Components/Itemdetails/ItemDetailContainer';
 
 const App = () => {
   return (
@@ -11,6 +11,8 @@ const App = () => {
     <ItemListContainer 
     textoRandom='Productos en stock'
     />
+
+    <ItemDetailContainer />
 
     </>
 

@@ -2,7 +2,7 @@ import ItemCounter from "./ItemCounter"
 
 
 
-
+/*
 const Item = ({product}) => {
 
     return (
@@ -15,7 +15,7 @@ const Item = ({product}) => {
                 <p class="card-text fs-3">${product.price}</p>
             </div>
             <button class="btn btn-dark mx-5">Ver detalles del producto</button>
-            <ItemCounter />
+            
 
         </div>
         
@@ -24,4 +24,4 @@ const Item = ({product}) => {
 }
 
 
-export default Item
+export default Item */

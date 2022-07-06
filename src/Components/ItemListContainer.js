@@ -4,11 +4,6 @@ import ItemList from "./ItemList"
 
 
 
-/*const promise = new Promise ((res, rej) => {
-    setTimeout(() => { 
-        res
-    })
-})*/
 
 
 
