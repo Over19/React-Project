@@ -1,27 +1,28 @@
 import ItemCounter from "./ItemCounter"
+import { Card } from "react-bootstrap"
+import Button from "react-bootstrap/esm/Button"
+import { Link, NavLink } from "react-router-dom"
 
 
 
-/*
-const Item = ({product}) => {
+
+
+const Item = ({producto}) => {
 
     return (
-        <div class="col-sm-3 px-4 py-5">
-            <div class="card text-center">
-                <img src="{product.image} " alt="{product.title}" />
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">{product.title}</h3>
-                <p class="card-text fs-3">${product.price}</p>
-            </div>
-            <button class="btn btn-dark mx-5">Ver detalles del producto</button>
-            
-
+    <div className="card">
+            <img className="fotito" src={producto.image} alt="" />    
+        <div className="card-body">
+        <h3 className="card-title">{producto.title} </h3>
+        <p className="card-text text-secondary">{producto.description}</p>
         </div>
-        
-
-    )
+        <div>
+            <Link to={`/product/${producto.id}`}><button> Ver mas detalles del Producto</button> </Link>
+        </div>
+    </div>
+)
 }
 
 
-export default Item */
+
+export default Item 

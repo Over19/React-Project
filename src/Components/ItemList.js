@@ -1,48 +1,34 @@
 
 import { useState,useEffect } from "react"
 import PacmanLoader from "react-spinners/PacmanLoader"
+import Item from "./Item"
 
 
 
+const styles = {
+    container: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center",
+        flexWrap: "wrap",
+    }
+}
 
 
 
-
-const ItemList = ({item}) => {
-    const [productos, setProductos] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false)
-
-    
-    useEffect(() => {
-        const getProductos = async () => {
-            try {
-                const response = await fetch ('https://fakestoreapi.com/products/category/electronics');
-                const data = await response.json();
-                setProductos(data);
-            }
-            catch (err) {
-                setError(true)
-            }
-            finally {
-                setTimeout(() => setLoading(false), 2000)
-                
-            }    
-        }
-        
-        getProductos();
-    }, []);
+const ItemList = ({productos}) => {
 
 return (
-        <>
-        {loading ? <PacmanLoader
-  color="#1fd8c7"
-  size={30}
-  speedMultiplier={3}
-/> :
-        error ? <p>Error :/</p> 
-        :<ul>{productos.map(producto => <li key={producto.id}>{producto.title}-{producto.price}-{producto.description}-{producto.image}</li> )} </ul> }
-        </>
+    <div className="itemContainer">
+    
+        {productos.map((producto) => (
+            <Item key={producto.id} producto={producto} />
+        ))}
+           </div>
+        
+       
+        
     )    
 }
 

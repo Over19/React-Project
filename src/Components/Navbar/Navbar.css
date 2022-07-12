@@ -1,5 +1,6 @@
 body {
     background-color: #EFEAD8;
+    align-items: center;
 }
 
 nav {
@@ -8,13 +9,11 @@ nav {
     align-items: center;
     background-color: #C7D36F;
     height: 3em;
+    width: 75vw;
 }
 
 
-img {
-    width: 10%;
-    align-items: center;
-}
+ 
 
 a {
     color: #00092C;
@@ -28,6 +27,11 @@ h2 {
     text-align: center;
     color: darkgreen;   
     
+}
+
+h3 {
+    color: darkblue;
+    font-weight: bolder;
 }
 
 h4 {
@@ -48,3 +52,32 @@ color: darkgreen;
     justify-content: center;
     align-items: center;
 }
+
+.fotito {
+    width: 30%;
+    height: 40%;
+}
+
+
+
+.itemContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    justify-content: space-around;
+    max-width: 100%;
+    
+}
+
+.card {
+    max-width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+
