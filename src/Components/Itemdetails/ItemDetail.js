@@ -1,5 +1,7 @@
 import { Link, NavLink } from "react-router-dom"
-import React from "react"
+import React, { useState, useContext } from "react"
+import ItemCounter from "../ItemCounter"
+
 
 
 
@@ -12,7 +14,13 @@ import React from "react"
 
 const ItemDetail = ({ product2 }) => {
 
-    return (
+  const [finalized, setFinalized] = useState(false);
+
+  const onAdd = (contador) => {
+    setFinalized(true)
+  }
+
+    /* return (
         <div class="col-sm-3 px-4 py-5">
             <div class="card text-center">
                 <img src={product2.image} alt="foto producto" />
@@ -25,12 +33,33 @@ const ItemDetail = ({ product2 }) => {
             <button class="btn btn-dark mx-5">Agregar producto al carrito</button>
         </div>
             )  
-    }
+    } */
 
 
+    return (
+      <div style={styles.infoContainer}>
+        <img style={styles.img} src={product2.image} alt={product2.title} />
+        <div style={styles.infoTextContainer}>
+          <div style={styles.infoText}>
+            <h1>{product2.title}</h1>
+            <span>${product2.price}</span>
+            <p>{product2.description}</p>
+          </div>
+  
+         {!finalized ? (
+          <ItemCounter onAdd={onAdd} stock={15} initial={1} />
+         ) : (
+          <Link to="/cart">
+            <button>FInalizar Compra</button>
+          </Link>
+         )
+        }
+        </div>
+      </div>
+    );
+  };
 
-
-/* const styles = {
+const styles = {
     infoContainer: {
       display: "flex",
       flexDirection: "row",
@@ -38,7 +67,7 @@ const ItemDetail = ({ product2 }) => {
       alignItems: "center"
     },
     img: {
-      width: "40%"
+      width: "30%"
     },
     infoTextContainer: {
       display: "flex",
@@ -52,6 +81,6 @@ const ItemDetail = ({ product2 }) => {
       justifyContent: "space-around"
     }
   };
- */
+ 
 
 export default ItemDetail
