@@ -1,13 +1,7 @@
-import { Link, NavLink } from "react-router-dom"
+import { Link, } from "react-router-dom"
 import React, { useState, useContext } from "react"
 import ItemCounter from "../ItemCounter"
-
-
-
-
-
-
-
+import { cartContext } from "../CartContext";
 
 
 
@@ -15,8 +9,11 @@ import ItemCounter from "../ItemCounter"
 const ItemDetail = ({ product2 }) => {
 
   const [finalized, setFinalized] = useState(false);
+  const { agregarProduct } = useContext(cartContext);
 
   const onAdd = (contador) => {
+    agregarProduct({...product2, qty: contador});
+    console.log(`Hay ${contador} productos en el carrito`);
     setFinalized(true)
   }
 
@@ -46,13 +43,13 @@ const ItemDetail = ({ product2 }) => {
             <p>{product2.description}</p>
           </div>
   
-         {!finalized ? (
+        {!finalized ? (
           <ItemCounter onAdd={onAdd} stock={15} initial={1} />
-         ) : (
+        ) : (
           <Link to="/cart">
-            <button>FInalizar Compra</button>
+            <button>Ir al Carrito</button>
           </Link>
-         )
+        )
         }
         </div>
       </div>
