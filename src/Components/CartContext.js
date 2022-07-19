@@ -9,6 +9,7 @@ const { Provider } = cartContext;
 const CartCustomProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
     const [qtyProducts, setQtyProducts] = useState(0);
+    const [price, setPrice] = useState(0)
 
     const getProductsQty = () => {
         let qty = 0;
@@ -39,6 +40,12 @@ const CartCustomProvider = ({ children }) => {
         setProducts(products.filter(products => products.id === id));
     };
 
+    const handlePrecio = (product) => {
+        let precio = 0;
+        products.map((product) => (precio += product.amount * product.price));
+        setPrice(precio)
+    }
+
     const IsInCart = (id) => {
         products.some(product => product.id === id)
     }
@@ -49,7 +56,7 @@ const CartCustomProvider = ({ children }) => {
     }
 
     return (
-        <Provider value= {{products, agregarProduct, qtyProducts, borrarProduct, reset}}>
+        <Provider value= {{products, agregarProduct, qtyProducts, borrarProduct, handlePrecio, reset}}>
             {children}
         </Provider>
     )
