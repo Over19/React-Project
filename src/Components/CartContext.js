@@ -30,7 +30,7 @@ const CartCustomProvider = ({ children }) => {
             aux[index].qty += product.qty;
             setProducts(aux); 
         } else {
-            setProducts([...products, agregarProduct]);
+            setProducts([...products,{...product}]);
         };
     }
 
