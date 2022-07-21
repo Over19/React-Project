@@ -4,7 +4,7 @@ import { useState } from "react"
 
 const ItemCounter = ({initial, onAdd, stock}) =>  {
 
-const [count, setCount] = useState(false)
+const [count, setCount] = useState(1)
 
 const clickSumar = () => {
     if (count < stock) {

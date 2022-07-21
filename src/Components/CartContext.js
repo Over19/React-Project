@@ -11,6 +11,7 @@ const CartCustomProvider = ({ children }) => {
     const [qtyProducts, setQtyProducts] = useState(0);
     const [price, setPrice] = useState(0)
 
+    console.log(products)
     const getProductsQty = () => {
         let qty = 0;
         products.forEach(product => {
@@ -47,7 +48,7 @@ const CartCustomProvider = ({ children }) => {
     }
 
     const IsInCart = (id) => {
-        products.some(product => product.id === id)
+        return products.some(product => product.id === id)
     }
 
     const reset = () => {
