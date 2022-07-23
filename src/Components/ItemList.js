@@ -21,6 +21,9 @@ const ItemList = ({productos}) => {
 
 return (
     <div className="itemContainer">
+        {/* <div className="textContainer">
+            <h2 className="neonText">OverTech Store</h2>
+        </div> */}
     
         {productos.map((producto) => (
             <Item key={producto.id} producto={producto} />

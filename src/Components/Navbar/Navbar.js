@@ -23,16 +23,18 @@ const Navbar = () => {
 
     return (
         <header style={styles.container}>
-            <div style={styles.branchContainer}>
+            {/* <div style={styles.branchContainer}>
                 <Link to="/"><img style={styles.logo} src={logo} alt="" /></Link>
-                <h1 style={styles.title}>Tienda Online OverTech</h1>
-            </div>
+                
+            </div> */}
 
             <div style={styles.links}>
                 <nav>
+                <Link to="/"><img style={styles.logo} src={logo} alt="" /></Link>
                     {categorias.map((category)=> <NavLink key={category.id} style={styles.link} to={category.route}>{category.name}</NavLink> )}
+                    <Link to="/cart"><CartWidget /></Link>
                 </nav>
-                <Link to="/cart"><CartWidget /></Link>
+                {/* <Link to="/cart"><CartWidget /></Link> */}
             </div>
         </header>
         )

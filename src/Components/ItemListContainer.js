@@ -34,7 +34,7 @@ export const ItemListContainer = ({texto}) => {
 
     return (
         <>
-        <h2>{texto}</h2>
+        
         {loading ? <PacmanLoader
   color="#1fd8c7"
   size={30}
