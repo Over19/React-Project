@@ -13,10 +13,10 @@ const viewport = {
 
 
 const Navbar = () => {
-
+// CAMBIAR ACA LAS CATEGORIAS
     const categorias = [
-        {name: "electronics", id: 0, route:"/category/electronics"},
-        {name: "jewelery", id: 1, route:"/category/jewelery"},
+        {name: "Teclados", id: 0, route:"/category/Teclados"},
+        {name: "Auriculares", id: 1, route:"/category/Auriculares"},
         {name: "men's clothing", id: 2, route:"/category/men's clothing"},
         {name: "women's clothings", id: 3, route:"/category/women's clothing"},
     ];

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import ItemDetail from "./ItemDetail"
 import PacmanLoader from "react-spinners/PacmanLoader"
 import { useParams } from "react-router-dom"
+import { db } from "../../FireBase/firebase"
+import { getDoc, collection, doc } from "firebase/firestore"
 
 
 
@@ -17,11 +19,23 @@ export const ItemDetailContainer = () => {
 
 
     useEffect(() => {
+        const productCollection = collection(db,'Coleccion 1');
+        const refDoc = doc(productCollection, productId);
+        getDoc(refDoc)
+        .then(result => {
+            const product = {
+                id: result.id,
+                ...result.data()
+            }
+            setProduct2(product);
+        })
+        .catch(err => console.log(err))
+        .finally(() => setLoading(false))
         
-        fetch(`https://fakestoreapi.com/products/${productId}`)
+        /* fetch(`https://fakestoreapi.com/products/${productId}`)
         .then(res => res.json())
         .then(data => setProduct2(data))
-        .finally (() => setLoading(false))
+        .finally (() => setLoading(false)) */
         
     }, [productId])
     
