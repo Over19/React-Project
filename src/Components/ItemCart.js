@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { cartContext } from "./CartContext";
-/* import DeleteIcon from '@mui/icons-material/Delete'; */
+
 
 
 

@@ -28,12 +28,6 @@ export const ItemListContainer = ({texto}) => {
       ? query(collection(db, 'Coleccion 1'), where('category', '==', `${categoryId}`))
       : collection(db, 'Coleccion 1')
 
-      /* const productCollection = collection(db,'Coleccion 1');
-      const q = query(productCollection, where("category", "==", `${categoryId}`));
-      let useQ = {}
-
-      categoryId ? useQ = q : useQ = productCollection */
-
       getDocs(q)
       .then(result => {
         const list = result.docs.map(doc => {
@@ -74,7 +68,7 @@ export const ItemListContainer = ({texto}) => {
 }
         
 
-       /*  <ItemCounter stock={10} /> */
+       
         
         
     
