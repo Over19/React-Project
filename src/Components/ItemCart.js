@@ -24,7 +24,7 @@ const ItemCart = ({product}) => {
                 <li className="list-group-item d-flex justify-content-between align-items-center">
                     Precio: ${product.price}
                 </li>
-                <button onClick={borrarProduct} className="btn btn-primary">
+                <button onClick={() => borrarProduct(product.id)} className="btn btn-primary">
                     Eliminar Item
                 </button>
             </ul>

@@ -38,7 +38,7 @@ const CartCustomProvider = ({ children }) => {
 
 
     const borrarProduct = (id) => {
-        setProducts(products.filter(products => products.id === id));
+        setProducts(products.filter(product => product.id !== id));
     };
 
     const handlePrecio = (product) => {

@@ -11,7 +11,7 @@ const Item = ({producto}) => {
             <img className="fotito" src={producto.image} alt="" />    
         <div className="card-body">
         <h3 className="card-title">{producto.title} </h3>
-        {/* <p className="card-text text-secondary">{producto.description}</p> */}
+        <h4>${producto.price}</h4>
         </div>
         <div>
             <Link to={`/product/${producto.id}`}><button> Ver mas detalles del Producto</button> </Link>

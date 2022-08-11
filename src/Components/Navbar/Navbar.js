@@ -17,8 +17,8 @@ const Navbar = () => {
     const categorias = [
         {name: "Teclados", id: 0, route:"/category/Teclados"},
         {name: "Auriculares", id: 1, route:"/category/Auriculares"},
-        {name: "men's clothing", id: 2, route:"/category/men's clothing"},
-        {name: "women's clothings", id: 3, route:"/category/women's clothing"},
+        {name: "Mouse", id: 2, route:"/category/Mouse"},
+        {name: "Monitores", id: 3, route:"/category/Monitores"},
     ];
 
     return (
@@ -34,7 +34,7 @@ const Navbar = () => {
                     {categorias.map((category)=> <NavLink key={category.id} style={styles.link} to={category.route}>{category.name}</NavLink> )}
                     <Link to="/cart"><CartWidget /></Link>
                 </nav>
-                {/* <Link to="/cart"><CartWidget /></Link> */}
+                
             </div>
         </header>
         )
