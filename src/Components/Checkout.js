@@ -21,14 +21,14 @@ const Checkout = () => {
 		address: "",
 	};
 
+	const [orderId, setOrderId] = useState(null);
+
 	const [buyer, setBuyer] = useState(form);
 
 	const getBuyer = (e) => {
 		const { name, value } = e.target;
 		setBuyer({ ...buyer, [name]: value });
 	};
-
-	const [orderId, setOrderId] = useState(null);
 
 	let total = 0;
 	for (let i = 0; i < products.length; i++) {
@@ -65,7 +65,7 @@ const Checkout = () => {
 				<div className="py-5 text-center mt-5">
 					<h3 className="mt-5">Gracias por confiar en nosotros!</h3>
 					<h4 className="mt-5">Tu compra se realizo exitosamente.</h4>
-					<h2>El iD de tu orden es {orderId}</h2>
+					<h2>El ID de tu orden es {orderId}</h2>
 					<Link to={`/`}>
 						<button className="btn btn-outline-primary">Volver al Home</button>
 					</Link>
@@ -77,43 +77,40 @@ const Checkout = () => {
 	return (
 		<div>
 			<center>
-				<h3 className="p-3 mb-2 bg-success mt-4">Ingresa tus datos</h3>
-				<form onSubmit={saveBuyer} className="w-75 p-3">
-					<input
-						onChange={getBuyer}
-						type="text"
-						name="name"
-						className="form-control"
-						placeholder="Nombre"
-						required
-					></input>
+				<h3 className="p-3 mb-2 mt-4">Ingresa tus datos</h3>
+				<form onSubmit={saveBuyer} className="w-50 p-3 space-y-4">
+					<div className="inputBox">
+						<input
+							onChange={getBuyer}
+							type="text"
+							name="name"
+							className="form-control"
+							required
+						></input>
+						<span>Nombre</span>
+					</div>
 
-					<input
-						onChange={getBuyer}
-						type="number"
-						name="phone"
-						className="form-control"
-						placeholder="Telefono"
-						required
-					></input>
+					<div className="inputBox">
+						<input
+							onChange={getBuyer}
+							type="number"
+							name="phone"
+							className="form-control"
+							required
+						></input>
+						<span>Telefono</span>
+					</div>
+					<div className="inputBox">
+						<input
+							onChange={getBuyer}
+							type="email"
+							name="email"
+							className="form-control"
+							required
+						></input>
+						<span>Email</span>
+					</div>
 
-					<input
-						onChange={getBuyer}
-						type="email"
-						name="email"
-						className="form-control"
-						placeholder="Email"
-						required
-					></input>
-
-					<input
-						onChange={getBuyer}
-						type="text"
-						name="address"
-						className="form-control"
-						placeholder="Direccion"
-						required
-					></input>
 					<button className="form-submit">Termina tu Compra.</button>
 				</form>
 			</center>
