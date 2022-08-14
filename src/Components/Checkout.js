@@ -93,7 +93,7 @@ const Checkout = () => {
 					<div className="inputBox">
 						<input
 							onChange={getBuyer}
-							type="number"
+							type="phone"
 							name="phone"
 							className="form-control"
 							required

@@ -22,6 +22,7 @@ const CartCustomProvider = ({ children }) => {
 	useEffect(() => {
 		getProductsQty();
 		handlePrecio();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [products]);
 
 	/* WISHLIST */
