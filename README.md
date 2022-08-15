@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+## Dependencias utilizadas:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1 Tailwind
+2 React
+3 Javascript
+4 materialize
+5 Bootstrap
+6 Firebase
+
+Link al proyecto: https://relaxed-gumption-185b64.netlify.app
 
 ## Available Scripts
 
