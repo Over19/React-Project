@@ -1,6 +1,6 @@
 # OverTech Store
 
-\*\*Overtech Store es una tienda digital ficticia de computacion
+**Overtech Store es una tienda digital ficticia de computacion**
 
 ##
 
@@ -13,7 +13,7 @@ Se construyo con las siguientes herramientas y/o dependencias
 3 Tailwind \
 4 materialize \
 5 Bootstrap \
-6 Firebase \
+6 Firebase
 
 ## Autor ✒️
 
